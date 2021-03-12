@@ -1,0 +1,135 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-pro {
+  width: 56px;
+  height: 56px;
+  border: 6px solid;
+  border-color: #03148B;
+  border-radius: 0;
+}
+
+.main-tec {
+  width: 56px;
+  height: 56px;
+  border: 6px solid;
+  border-color: #15B4E6;
+  border-radius: 0;
+}
+
+.main-sol {
+  width: 56px;
+  height: 56px;
+  border: 6px solid;
+  border-color: #69207B;
+  border-radius: 100%;
+}
+
+.main-exp {
+  width: 56px;
+  height: 56px;
+  border: 6px solid;
+  border-color: #0AAC90;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.main-dir {
+  width: 56px;
+  height: 56px;
+  border: 6px solid;
+  border-color: #BCD909;
+  border-top-left-radius: 50%;
+}
+
+.main-gov {
+  width: 56px;
+  height: 56px;
+  border: 6px solid;
+  border-color: #F68806;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.main-sup {
+  width: 56px;
+  height: 56px;
+  border: 6px solid;
+  border-color: #EE0F23;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+#loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f0f0f0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#loader #load {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#loader #load-logo {
+  margin-right: 10px;
+  background-color: #f0f0f0;
+}
+
+#loader .load-title {
+  color: #4b4b4b;
+  font-size: 48px;
+  font-weight: 500;
+  height: 56px;
+  padding: 0px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#company-name {
+  margin-left: -172px;
+  opacity: 0;
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+  z-index: -1;
+}
+
+#company-name.final {
+  margin-left: 0;
+  opacity: 1;
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}

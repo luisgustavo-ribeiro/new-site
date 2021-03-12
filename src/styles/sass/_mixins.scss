@@ -1,0 +1,51 @@
+@mixin item {
+	width: 56px;
+	height: 56px;
+	border: 6px solid;
+}
+
+@mixin main-pro {
+	@include item;
+	border-color: $main-pro;
+	border-radius: 0;
+}
+
+@mixin main-tec {
+	@include item;
+	border-color: $main-tec;
+	border-radius: 0;
+}
+
+@mixin main-sol {
+	@include item;
+	border-color: $main-sol;
+	border-radius: 100%;
+}
+
+@mixin main-exp {
+	@include item;
+	border-color: $main-exp;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+
+@mixin main-dir {
+	@include item;
+	border-color: $main-dir;
+	border-top-left-radius: 50%;
+}
+
+@mixin main-gov {
+	@include item;
+	border-color: $main-gov;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+@mixin main-sup {
+	@include item;
+	border-color: $main-sup;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
