@@ -1,25 +1,26 @@
 function changeLogoOnLoader() {
 	
-  const divClasses = ['main-pro', 'main-tec', 'main-sol', 'main-exp', 'main-dir', 'main-gov', 'main-sup'];
-  const companyAreas = ['products', 'tech', 'solutions', 'experience', 'directors', 'governance', 'support'];
-
   const iconContainer = document.querySelector('#load-logo');
-  const titleContainer = document.querySelector('#company-area')
+  const titleContainer = document.querySelector('#company-area');
 
-  divClasses.map((c, i) => {
+  const companyAreas = ['products', 'directors', 'governance', 'experience', 'solutions', 'support', 'tech'];
+
+  companyAreas.map((c, i) => {
+
+    const area = c.substring(0, 3);
 
     setTimeout(() => {
 
-      iconContainer.classList.remove(divClasses[i-1]);
-      iconContainer.classList.add(c);
+      i > 0 ? iconContainer.classList.remove(`main-${companyAreas[i-1].substring(0, 3)}`) : ''
+      iconContainer.classList.add(`main-${area}`);
 
       titleContainer.innerText = companyAreas[i];
 
-      if(divClasses.length === i+1) document.querySelector('#company-name').classList.add('final');
+      if(companyAreas.length === i+1) document.querySelector('#company-name').classList.add('final');
 
     }, i * 800);
 
-  })
+  });
 
 }
 

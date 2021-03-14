@@ -49,7 +49,9 @@ body {
 
   #load {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
+    width: 420px;
+    overflow: hidden;
   }
   
   #load-logo {
@@ -58,10 +60,10 @@ body {
   }
 
   .load-title {
-    color: #4b4b4b;
+    color: $main-grey;
     font-size: 48px;
     font-weight: 500;
-    height: 56px;
+    height: 56px;    
     padding: 0px 0 10px;
     display: flex;
     align-items: center;
@@ -72,13 +74,24 @@ body {
 #company-name {  
   margin-left: -172px;
   opacity: 0;
-  transition: 200ms ease-in-out all;
   z-index: -1;
+  display: flex;
 
   &.final {
     margin-left: 0;
     opacity: 1;
-    transition: 200ms ease-in-out all;
+    transition: 160ms cubic-bezier(0.4, 0.01, 0.2, 1) all;
     transition-delay: 400ms;
   }
+
+  .cn-dot {
+    height: 6px;
+    width: 6px;
+    margin: auto 3px 12px;
+    background-color: $main-grey;
+  }
+}
+
+#company-area {
+  transition: 200ms ease-in-out all;
 }
