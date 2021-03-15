@@ -9,6 +9,39 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.grid-item {
+  height: 51px;
+  width: 51px;
+  border: 1px solid #fff;
+}
+
+.grid-item.filled {
+  background-color: #fff;
+}
+
+.grid-item.main {
+  border-radius: 0;
+}
+
+.grid-item.sol {
+  border-radius: 100%;
+}
+
+.grid-item.exp {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.grid-item.dir {
+  border-top-left-radius: 50%;
+}
+
+.grid-item.gov-sup {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
 .main-pro {
   width: 56px;
   height: 56px;
@@ -99,6 +132,16 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+  z-index: 99;
+}
+
+#loader.closed {
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+  opacity: 0;
+  z-index: -1;
 }
 
 #loader #load {
@@ -133,7 +176,7 @@ body {
   position: relative;
 }
 
-#company-name {
+#loader #company-name {
   margin-left: -172px;
   opacity: 0;
   z-index: -1;
@@ -142,7 +185,7 @@ body {
   display: flex;
 }
 
-#company-name.final {
+#loader #company-name.final {
   margin-left: 0;
   opacity: 1;
   -webkit-transition: 160ms cubic-bezier(0.4, 0.01, 0.2, 1) all;
@@ -151,14 +194,36 @@ body {
           transition-delay: 400ms;
 }
 
-#company-name .cn-dot {
+#loader #company-name .cn-dot {
   height: 6px;
   width: 6px;
   margin: auto 3px 12px;
   background-color: #606167;
 }
 
-#company-area {
+#loader #company-area {
   -webkit-transition: 200ms ease-in-out all;
   transition: 200ms ease-in-out all;
+}
+
+#hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #005abc;
+}
+
+.square-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 50px);
+  -ms-grid-rows: (50px)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 50px);
+  height: 500px;
+  width: 700px;
+  margin: auto;
 }
